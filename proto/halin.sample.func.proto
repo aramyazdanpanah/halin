@@ -1,0 +1,5 @@
+package halin.sample.func;
+import "halin.sample.type.proto";
+// messageCode = 101
+message Call {
+}

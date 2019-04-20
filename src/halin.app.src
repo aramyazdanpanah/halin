@@ -1,0 +1,19 @@
+{application, halin,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { halin_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    cowlib,
+    ranch,
+    cowboy
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
