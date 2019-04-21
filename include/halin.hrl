@@ -8,6 +8,7 @@
                      conn_pid :: pid(),
                      user_id :: non_neg_integer(),
                      auth :: true | false}).
+-type conn_state() :: #conn_state{}.
 
 -ifdef(TEST).
 -define(LOG_ERROR(Format, Args), ct:print(default, 50, Format, Args)).

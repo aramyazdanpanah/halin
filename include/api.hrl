@@ -18,6 +18,9 @@
                  verb :: atom(),
                  params :: reply_params()}).
 
+-type reply() :: #reply{}.
+-type request() :: #request{}.
+-type signal() :: #signal{}.
 %% === request DoAuthentication
 -record('DoAuthentication', {user_id :: integer(),
                              token :: string()}).
@@ -49,7 +52,7 @@
 
 -record(msg_body, {text_body :: string(),
                    voice_oid :: string(),
-                   voice_duration :: string()}).
+                   voice_duration :: integer()}).
 
 -record('PublishMsg', {sess_id :: integer(),
                        msg_info :: #msg_info{},
@@ -66,6 +69,10 @@
                         online_viewer :: integer(),
                         like :: integer(),
                         dislike :: integer()}).
+
+%% === Error
+-record('Error', {error_type :: string(),
+                  description :: string()}).
 
 %% === types
 -type request_params() :: #'DoAuthentication'{} | y.
